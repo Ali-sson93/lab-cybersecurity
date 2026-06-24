@@ -1,55 +1,38 @@
-# Monitoramento e Processamento de Logs com Bash
+# Monitoramento e processamento de logs
 
-## Sobre o projeto
+## Descrição
+Laboratório prático desenvolvido em Bash para processar arquivos de log, filtrar eventos relevantes, remover duplicidades, gerar estatísticas e consolidar logs em um arquivo final organizado.
 
-Este laboratório tem como objetivo praticar comandos Linux e automação com Bash Script por meio de um script de processamento de arquivos de log.
+Este projeto foi construído como parte dos meus estudos em Linux e automação, com foco em manipulação de arquivos, uso de comandos nativos do sistema e criação de scripts para tarefas administrativas.
 
-O script realiza filtragem, tratamento, ordenação, remoção de duplicidades, geração de estatísticas e combinação de logs processados.
+## Objetivo do laboratório
+Automatizar o tratamento de arquivos de log, aplicando operações comuns em ambientes Linux, como:
 
-## Objetivos praticados
+- localizar arquivos de log
+- filtrar eventos específicos
+- ocultar informações sensíveis
+- ordenar e remover registros duplicados
+- contar linhas e palavras
+- gerar arquivos de estatísticas
+- consolidar múltiplos logs em um único arquivo
+- identificar se o log é de frontend ou backend
 
-- Localizar arquivos `.log`
-- Filtrar mensagens de erro
-- Identificar dados sensíveis
-- Mascarar informações sensíveis
-- Ordenar registros
-- Remover duplicidades
-- Comparar arquivos
-- Gerar estatísticas
-- Centralizar logs processados
-- Identificar origem dos logs com tags de frontend e backend
-
-## Comandos utilizados
-
-- `find`
-- `grep`
-- `sed`
-- `sort`
-- `uniq`
-- `diff`
-- `wc`
-- `echo`
-- `basename`
-- `mkdir`
-- `cat`
-- `date`
-
-## Conceitos aplicados
-
-- Redirecionamento com `>` e `>>`
-- Variáveis em Bash
-- Laços de repetição
-- Condicionais `if`, `elif` e `else`
-- Organização de arquivos processados
-- Boas práticas iniciais de análise de logs
+## Funcionalidades implementadas
+- Busca de arquivos de log com `find`
+- Filtragem de linhas com `grep`
+- Anonimização/substituição de conteúdo com `sed`
+- Ordenação de eventos com `sort`
+- Remoção de duplicados com `uniq`
+- Geração de métricas com `wc`
+- Extração de nome de arquivo com `basename`
+- Criação automática de diretórios com `mkdir -p`
+- Consolidação de logs processados em um arquivo final
+- Inclusão de tags como `[FRONTEND]` e `[BACKEND]`
+- Ordenação final dos logs combinados por data
 
 ## Estrutura do laboratório
-
-```text
-monitoramento-logs/
+```bash
+linux/monitoramento-logs/
 ├── monitoramento-logs.sh
 ├── log_stats.txt
 └── README.md
-Aprendizados
-
-Durante este laboratório, pratiquei a construção gradual de um script Bash para automatizar tarefas comuns de análise de logs, reforçando conceitos importantes para infraestrutura, administração Linux e segurança da informação.
